@@ -1,22 +1,32 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { Card } from "@/components/ui/card"
-import { CheckCircle2, Clock, Users, Zap } from "lucide-react"
-import DownloadForm from "@/components/download-form"
+import Image from "next/image";
+import { Card } from "@/components/ui/card";
+import { CheckCircle2, Clock, Users, Zap } from "lucide-react";
+import DownloadForm from "@/components/download-form";
 
 export default function LandingPage() {
-
   return (
     <div className="relative min-h-screen overflow-hidden bg-[#0A0F1E]">
       {/* Grid pattern background */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a2332_1px,transparent_1px),linear-gradient(to_bottom,#1a2332_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
 
       {/* Background SVG pattern with dots */}
-      <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        className="absolute inset-0 w-full h-full"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <defs>
-          <pattern id="dotPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+          <pattern
+            id="dotPattern"
+            x="0"
+            y="0"
+            width="40"
+            height="40"
+            patternUnits="userSpaceOnUse"
+          >
             <circle cx="2" cy="2" r="1" fill="rgba(255, 255, 255, 0.1)" />
           </pattern>
         </defs>
@@ -62,10 +72,28 @@ export default function LandingPage() {
                           strokeLinecap="round"
                         />
                         <defs>
-                          <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" stopColor="#F7DF1F" stopOpacity="0.8" />
-                            <stop offset="50%" stopColor="#FFFE65" stopOpacity="1" />
-                            <stop offset="100%" stopColor="#F7DF1F" stopOpacity="0.8" />
+                          <linearGradient
+                            id="gradient"
+                            x1="0%"
+                            y1="0%"
+                            x2="100%"
+                            y2="0%"
+                          >
+                            <stop
+                              offset="0%"
+                              stopColor="#F7DF1F"
+                              stopOpacity="0.8"
+                            />
+                            <stop
+                              offset="50%"
+                              stopColor="#FFFE65"
+                              stopOpacity="1"
+                            />
+                            <stop
+                              offset="100%"
+                              stopColor="#F7DF1F"
+                              stopOpacity="0.8"
+                            />
                           </linearGradient>
                         </defs>
                       </svg>
@@ -74,8 +102,8 @@ export default function LandingPage() {
                 </h1>
 
                 <p className="mx-auto max-w-2xl text-balance text-xl leading-relaxed text-gray-300 md:text-2xl">
-                  Lo que me hubiese gustado saber antes de lanzar mi primer saas para evitar perder meses en
-                  cosas innecesarias.
+                  Lo que me hubiese gustado saber antes de lanzar mi primer saas
+                  para evitar perder meses en cosas innecesarias.
                 </p>
               </div>
 
@@ -109,7 +137,9 @@ export default function LandingPage() {
                   Contenido del roadmap
                 </span>
               </h2>
-              <p className="text-lg text-gray-300">Tu plan completo para lanzar tu primer SaaS</p>
+              <p className="text-lg text-gray-300">
+                Tu plan completo para lanzar tu primer SaaS
+              </p>
             </div>
 
             <div className="space-y-16">
@@ -117,11 +147,17 @@ export default function LandingPage() {
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#F7DF1F]/20 to-[#FFFE65]/10 p-4 shadow-lg shadow-[#F7DF1F]/10">
-                    <img src="/pro-checklist.svg" alt="Validación" className="h-full w-full" />
+                    <img
+                      src="/pro-checklist.svg"
+                      alt="Validación"
+                      className="h-full w-full"
+                    />
                   </div>
                   <div className="flex-1">
                     <div className="mb-3 flex items-center gap-3">
-                      <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#FFFE65]/20 text-sm font-bold text-[#FFFE65]">1</span>
+                      <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#FFFE65]/20 text-sm font-bold text-[#FFFE65]">
+                        1
+                      </span>
                       <h3 className="text-3xl font-bold md:text-4xl">
                         <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                           Validación
@@ -142,7 +178,9 @@ export default function LandingPage() {
                     ].map((item, index) => (
                       <li key={index} className="flex items-start gap-3">
                         <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-white" />
-                        <span className="leading-relaxed text-gray-200">{item}</span>
+                        <span className="leading-relaxed text-gray-200">
+                          {item}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -153,11 +191,17 @@ export default function LandingPage() {
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500/20 to-cyan-500/10 p-4 shadow-lg shadow-blue-500/10">
-                    <img src="/pro-bulb.svg" alt="Construcción del MVP" className="h-full w-full" />
+                    <img
+                      src="/pro-bulb.svg"
+                      alt="Construcción del MVP"
+                      className="h-full w-full"
+                    />
                   </div>
                   <div className="flex-1">
                     <div className="mb-3 flex items-center gap-3">
-                      <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-blue-500/20 text-sm font-bold text-blue-300">2</span>
+                      <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-blue-500/20 text-sm font-bold text-blue-300">
+                        2
+                      </span>
                       <h3 className="text-3xl font-bold md:text-4xl">
                         <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                           Construcción del MVP
@@ -178,7 +222,9 @@ export default function LandingPage() {
                     ].map((item, index) => (
                       <li key={index} className="flex items-start gap-3">
                         <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-white" />
-                        <span className="leading-relaxed text-gray-200">{item}</span>
+                        <span className="leading-relaxed text-gray-200">
+                          {item}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -189,11 +235,17 @@ export default function LandingPage() {
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-500/20 to-pink-500/10 p-4 shadow-lg shadow-purple-500/10">
-                    <img src="/pro-chat.svg" alt="Primeros clientes" className="h-full w-full" />
+                    <img
+                      src="/pro-chat.svg"
+                      alt="Primeros clientes"
+                      className="h-full w-full"
+                    />
                   </div>
                   <div className="flex-1">
                     <div className="mb-3 flex items-center gap-3">
-                      <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-purple-500/20 text-sm font-bold text-purple-300">3</span>
+                      <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-purple-500/20 text-sm font-bold text-purple-300">
+                        3
+                      </span>
                       <h3 className="text-3xl font-bold md:text-4xl">
                         <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                           Primeros clientes
@@ -214,7 +266,9 @@ export default function LandingPage() {
                     ].map((item, index) => (
                       <li key={index} className="flex items-start gap-3">
                         <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-white" />
-                        <span className="leading-relaxed text-gray-200">{item}</span>
+                        <span className="leading-relaxed text-gray-200">
+                          {item}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -228,13 +282,20 @@ export default function LandingPage() {
           <div className="mx-auto max-w-3xl">
             <Card className="border-white/10 bg-white/5 p-10 shadow-sm backdrop-blur-sm">
               <div className="flex flex-col items-center gap-6 text-center">
-                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white/10 text-4xl backdrop-blur-sm">
-                  👨‍💻
+                <div className="relative h-20 w-20 overflow-hidden rounded-full bg-white/10 backdrop-blur-sm">
+                  <Image
+                    src="/yo.webp"
+                    alt="Victor"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="space-y-4">
                   <p className="text-balance text-lg leading-relaxed text-gray-200">
-                    Soy un creador independiente que ha pasado por esto y ha perdido meses aprendiendo lo que no
-                    necesitaba. Este roadmap es lo que haría hoy si tuviera que empezar de cero.
+                    Soy Víctor González, programador de 23 años especializado en
+                    desarrollo fullstack. Estoy creando mi primera startup y
+                    documentando todo el proceso para que puedas aprender de mis
+                    aciertos y evitar los errores que cometa en el camino.
                   </p>
                   <p className="text-balance text-lg leading-relaxed text-gray-200">
                     Actualmente estoy creando mi startup{" "}
@@ -270,10 +331,10 @@ export default function LandingPage() {
           <div className="mx-auto max-w-3xl text-center">
             <div className="mb-10 space-y-6">
               <h2 className="text-balance text-4xl font-bold md:text-5xl">
-                <span className="bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
                   Empieza hoy tu camino hacia tu primer{" "}
                   <span className="relative inline-block">
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F7DF1F]/80 via-[#FFFE65] to-[#F7DF1F]/80">
+                    <span className="text-transparent bg-clip-text bg-linear-to-r from-[#F7DF1F]/80 via-[#FFFE65] to-[#F7DF1F]/80">
                       SaaS
                     </span>
                     <svg
@@ -290,10 +351,28 @@ export default function LandingPage() {
                         strokeLinecap="round"
                       />
                       <defs>
-                        <linearGradient id="gradient-saas" x1="0%" y1="0%" x2="100%" y2="0%">
-                          <stop offset="0%" stopColor="#F7DF1F" stopOpacity="0.8" />
-                          <stop offset="50%" stopColor="#FFFE65" stopOpacity="1" />
-                          <stop offset="100%" stopColor="#F7DF1F" stopOpacity="0.8" />
+                        <linearGradient
+                          id="gradient-saas"
+                          x1="0%"
+                          y1="0%"
+                          x2="100%"
+                          y2="0%"
+                        >
+                          <stop
+                            offset="0%"
+                            stopColor="#F7DF1F"
+                            stopOpacity="0.8"
+                          />
+                          <stop
+                            offset="50%"
+                            stopColor="#FFFE65"
+                            stopOpacity="1"
+                          />
+                          <stop
+                            offset="100%"
+                            stopColor="#F7DF1F"
+                            stopOpacity="0.8"
+                          />
                         </linearGradient>
                       </defs>
                     </svg>
@@ -315,5 +394,5 @@ export default function LandingPage() {
         </footer>
       </div>
     </div>
-  )
+  );
 }

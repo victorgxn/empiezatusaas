@@ -64,7 +64,7 @@ export default function DownloadForm({ idSuffix = "" }: DownloadFormProps) {
       <div className="mx-auto max-w-lg rounded-xl border border-white/20 bg-white/10 p-6 shadow-sm backdrop-blur-sm">
         <div className="flex items-center justify-center gap-2 text-white">
           <CheckCircle2 className="h-5 w-5" />
-          <p className="font-medium">¡Descarga iniciada! Revisa tu correo</p>
+          <p className="font-medium">¡Descarga iniciada! Revisa tus descargas</p>
         </div>
       </div>
     );
@@ -85,8 +85,8 @@ export default function DownloadForm({ idSuffix = "" }: DownloadFormProps) {
           <Button
             type="submit"
             size="lg"
-            disabled={isSubmitting}
-            className="h-12 bg-white px-8 text-base font-medium text-gray-900 shadow-sm hover:bg-gray-100 disabled:opacity-50"
+            disabled={isSubmitting || !acceptedPrivacy || !email}
+            className="h-12 bg-white px-8 text-base font-medium text-gray-900 shadow-sm hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isSubmitting ? "Procesando..." : "Descargar gratis"}
           </Button>
