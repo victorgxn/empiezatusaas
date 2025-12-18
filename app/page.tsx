@@ -166,11 +166,11 @@ export default function LandingPage() {
                 <Card className="border-white/10 bg-white/5 p-8 shadow-sm backdrop-blur-sm">
                   <ul className="space-y-4">
                     {[
-                      "Por qué la mayoría de ideas SaaS fracasan",
-                      "Cómo encontrar problemas por los que la gente paga",
-                      "Microvalidación sin escribir código",
-                      "Definir tu propuesta mínima de valor",
-                      "Señales para decidir si construir o descartar",
+                      "Por qué muchas ideas de SaaS fracasan",
+                      "Encuentra ideas que valen la pena",
+                      "Microvalidación rápida",
+                      "Tu propuesta mínima de valor (MVP mental)",
+                      "Señales de que vale la pena construir",
                     ].map((item, index) => (
                       <li key={index} className="flex items-start gap-3">
                         <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-white" />
@@ -210,11 +210,10 @@ export default function LandingPage() {
                 <Card className="border-white/10 bg-white/5 p-8 shadow-sm backdrop-blur-sm">
                   <ul className="space-y-4">
                     {[
-                      "Qué aprender y qué NO aprender",
-                      "Stack técnico mínimo para lanzar rápido",
-                      "Construir un MVP sin perfeccionismo",
-                      "Testeo temprano y feedback real",
-                      "Checklist de lanzamiento inicial",
+                      "Qué aprender y qué no",
+                      "Stack mínimo para lanzar rápido",
+                      "Prototipo rápido",
+                      "Testeo interno y mejoras rápidas",
                     ].map((item, index) => (
                       <li key={index} className="flex items-start gap-3">
                         <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-white" />
@@ -244,7 +243,7 @@ export default function LandingPage() {
                       </span>
                       <h3 className="text-3xl font-bold md:text-4xl">
                         <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                          Primeros clientes
+                          Primeros clientes y validación real
                         </span>
                       </h3>
                     </div>
@@ -254,10 +253,9 @@ export default function LandingPage() {
                 <Card className="border-white/10 bg-white/5 p-8 shadow-sm backdrop-blur-sm">
                   <ul className="space-y-4">
                     {[
-                      "Cómo conseguir los primeros usuarios gratis",
-                      "Hablar con clientes reales y aprender",
-                      "Iterar sin romper el producto",
-                      "Métricas iniciales que sí importan",
+                      "Canales para conseguir los primeros usuarios gratis",
+                      "Cómo hablar con tus primeros clientes",
+                      "Iterar según feedback real",
                       "Qué haría distinto si empezara hoy",
                     ].map((item, index) => (
                       <li key={index} className="flex items-start gap-3">
