@@ -1,34 +1,18 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google"
+import { Space_Grotesk } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-const _geist = Geist({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
 const _spaceGrotesk = Space_Grotesk({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Empieza Tu SaaS | Lanza tu primer SaaS en 90 días",
   description:
-    "El roadmap exacto que usaría hoy para pasar de cero a tus primeros clientes, evitando perder meses en cosas innecesarias.",
+    "El roadmap exacto que usaría para lanzar mi SaaS en 90 días, evitando perder meses en cosas innecesarias.",
   generator: "empiezatusaas.com",
   icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
+    icon: "/favicon.ico",
   },
 }
 

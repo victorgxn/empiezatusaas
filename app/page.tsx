@@ -1,7 +1,3 @@
-"use client";
-
-import type React from "react";
-
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import { CheckCircle2, Clock, Users, Zap } from "lucide-react";
@@ -55,25 +51,25 @@ export default function LandingPage() {
                     <br />
                     en{" "}
                     <span className="relative inline-block">
-                      <span className="text-2xl md:text-4xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-[#F7DF1F]/80 via-[#FFFE65] to-[#F7DF1F]/80 font-bold inline-block">
+                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F7DF1F]/80 via-[#FFFE65] to-[#F7DF1F]/80">
                         90 días
                       </span>
                       <svg
-                        className="absolute -bottom-2 left-0 w-full"
-                        viewBox="0 0 200 12"
+                        className="absolute -bottom-1 left-0 w-full"
+                        viewBox="0 0 100 8"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                         preserveAspectRatio="none"
                       >
                         <path
-                          d="M2 7C43.6667 3.66667 128.2 -1.4 198 7"
-                          stroke="url(#gradient)"
-                          strokeWidth="3"
+                          d="M2 5C20 3 80 2 98 5"
+                          stroke="url(#gradient-90dias)"
+                          strokeWidth="2"
                           strokeLinecap="round"
                         />
                         <defs>
                           <linearGradient
-                            id="gradient"
+                            id="gradient-90dias"
                             x1="0%"
                             y1="0%"
                             x2="100%"
@@ -292,7 +288,7 @@ export default function LandingPage() {
                 </div>
                 <div className="space-y-4">
                   <p className="text-balance text-lg leading-relaxed text-gray-200">
-                    Soy Víctor González, programador de 23 años especializado en
+                    Soy Víctor González, un programador de 23 años especializado en
                     desarrollo fullstack. Estoy creando mi primera startup y
                     documentando todo el proceso para que puedas aprender de mis
                     aciertos y evitar los errores que cometa en el camino.
