@@ -32,6 +32,12 @@ export default function DownloadForm({ idSuffix = "" }: DownloadFormProps) {
       return;
     }
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setError("Por favor, introduce un correo electrónico válido");
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
