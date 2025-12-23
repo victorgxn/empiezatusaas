@@ -61,9 +61,9 @@ export default function DownloadForm({ idSuffix = "" }: DownloadFormProps) {
 
   if (isSuccess) {
     return (
-      <div className="mx-auto max-w-lg rounded-xl border border-white/20 bg-white/10 p-6 shadow-sm backdrop-blur-sm">
-        <div className="flex items-center justify-center gap-2 text-white">
-          <CheckCircle2 className="h-5 w-5" />
+      <div className="mx-auto max-w-lg rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+        <div className="flex items-center justify-center gap-2 text-gray-900">
+          <CheckCircle2 className="h-5 w-5 text-[#F7DF1F]" />
           <p className="font-medium">¡Descarga iniciada! Revisa tus descargas</p>
         </div>
       </div>
@@ -71,22 +71,22 @@ export default function DownloadForm({ idSuffix = "" }: DownloadFormProps) {
   }
 
   return (
-    <div className="mx-auto max-w-lg space-y-4">
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-        <div className="flex flex-col gap-3 sm:flex-row">
+    <div className="mx-auto max-w-lg space-y-3 sm:space-y-4">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:gap-4">
+        <div className="flex flex-col gap-2 sm:gap-3 sm:flex-row">
           <Input
             type="email"
             placeholder="tu@email.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="h-12 flex-1 border-white/10 bg-white/5 text-base text-white shadow-sm backdrop-blur-sm placeholder:text-gray-400"
+            className="h-14 sm:h-12 w-full flex-1 border-gray-300 bg-white text-base text-gray-900 shadow-sm placeholder:text-gray-400"
           />
           <Button
             type="submit"
             size="lg"
             disabled={isSubmitting || !acceptedPrivacy || !email}
-            className="h-12 bg-white px-8 text-base font-medium text-gray-900 shadow-sm hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="h-11 sm:h-12 bg-[#F7DF1F] px-8 text-base font-medium text-gray-900 shadow-sm hover:bg-[#e5cf1c] disabled:bg-gray-400 disabled:text-white disabled:cursor-not-allowed"
           >
             {isSubmitting ? "Procesando..." : "Descargar gratis"}
           </Button>
@@ -98,21 +98,21 @@ export default function DownloadForm({ idSuffix = "" }: DownloadFormProps) {
             checked={acceptedPrivacy}
             onChange={(e) => setAcceptedPrivacy(e.target.checked)}
             required
-            className="h-4 w-4 cursor-pointer rounded border-white/10 bg-white/5 text-[#FFFE65] focus:ring-2 focus:ring-[#FFFE65]/50"
+            className="h-4 w-4 cursor-pointer rounded border-gray-300 bg-white text-[#F7DF1F] focus:ring-2 focus:ring-[#F7DF1F]/50"
           />
-          <label htmlFor={`privacy-policy${idSuffix}`} className="cursor-pointer text-sm text-gray-300">
+          <label htmlFor={`privacy-policy${idSuffix}`} className="cursor-pointer text-sm text-gray-700">
             Acepto la{" "}
             <a
               href="/politica-privacidad"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#FFFE65] underline hover:text-[#F7DF1F]"
+              className="text-gray-700 underline decoration-[#F7DF1F] decoration-2"
             >
               política de privacidad
             </a>
           </label>
         </div>
-        {error && <p className="text-center text-sm text-red-400">{error}</p>}
+        {error && <p className="text-center text-sm text-red-500">{error}</p>}
         <p className="text-center text-xs text-gray-500">✓ Sin spam • Descarga inmediata</p>
       </form>
     </div>
