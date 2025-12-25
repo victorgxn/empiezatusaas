@@ -1,7 +1,25 @@
+import type { Metadata } from "next"
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import { CheckCircle2, Clock, Users, Zap } from "lucide-react";
 import DownloadForm from "@/components/download-form";
+import { siteConfig } from "@/lib/config";
+
+export const metadata: Metadata = {
+  title: "Empieza Tu SaaS | Lanza tu primer SaaS en 90 días",
+  description: "El roadmap exacto que usaría para lanzar mi SaaS en 90 días, evitando perder meses en cosas innecesarias.",
+  alternates: {
+    canonical: siteConfig.url
+  },
+  openGraph: {
+    title: "Empieza Tu SaaS | Lanza tu primer SaaS en 90 días",
+    description: "El roadmap exacto que usaría para lanzar mi SaaS en 90 días, evitando perder meses en cosas innecesarias.",
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    locale: 'es_ES',
+    type: 'website',
+  }
+}
 
 export default function LandingPage() {
   return (

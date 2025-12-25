@@ -1,3 +1,22 @@
+import type { Metadata } from "next"
+import { siteConfig } from "@/lib/config"
+
+export const metadata: Metadata = {
+    title: "Política de Privacidad | Empieza Tu SaaS",
+    description: "Política de privacidad de empiezatusaas.com. Conoce cómo tratamos tus datos personales.",
+    alternates: {
+        canonical: `${siteConfig.url}/politica-privacidad`
+    },
+    openGraph: {
+        title: "Política de Privacidad | Empieza Tu SaaS",
+        description: "Política de privacidad de empiezatusaas.com. Conoce cómo tratamos tus datos personales.",
+        url: `${siteConfig.url}/politica-privacidad`,
+        siteName: siteConfig.name,
+        locale: 'es_ES',
+        type: 'website',
+    }
+}
+
 export default function PoliticaPrivacidad() {
     return (
         <div className="relative min-h-screen overflow-hidden bg-[#0A0F1E]">
